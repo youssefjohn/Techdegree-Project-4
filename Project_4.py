@@ -5,9 +5,7 @@
 '''
 
 
-
 import sys, datetime, sqlite3
-
 
 
 def lookup_menu():
@@ -40,7 +38,6 @@ def lookup():
 
     """
 
-
     lookup_choice = lookup_menu()
 
     if lookup_choice == "a":
@@ -65,6 +62,7 @@ def lookup():
         main()
 
     return lookup_choice
+
 
 def make_edit_question():
     """
@@ -135,6 +133,7 @@ def add_to_sql(values_into_coloumn):
     conn.commit()
     conn.close()
 
+
 def shorten_code(list_of_results):
     """
     THIS IS JUST A BIT OF HOUSEKEEPING. IT TAKES A LIST OF
@@ -148,8 +147,6 @@ def shorten_code(list_of_results):
         thing = list(thing)
         end.append(thing)
 
-
-
     for thing in end:
         print("ID: ", thing[0])
         print("Name: ", thing[1])
@@ -159,6 +156,7 @@ def shorten_code(list_of_results):
         print("Date: ", thing[5])
         a = input("Press Enter to see next result.")
         print("")
+
 
 def ask_user_for_time():
     """
@@ -213,8 +211,6 @@ def inputs_from_user():
     add_to_sql(list_of_answers)
 
     return name, task, notes
-
-
 
 
 def lookup_by_name(name_from_sql):
@@ -354,8 +350,6 @@ def main():
         else:
             print("Sorry the value you entered is not recognised\n"
                   "Please try again")
-
-
 
 
 if __name__ == '__main__':

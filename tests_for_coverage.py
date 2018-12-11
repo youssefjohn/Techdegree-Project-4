@@ -62,8 +62,6 @@ class Lookuptest(unittest.TestCase):
             self.assertEqual(fake, ("john", "make test", "here are some notes"))
 
 
-
-
     def test_main_input(self):
         """
         HERE I TEST THE INPUT OF FUNCTION MAIN_MENU.
@@ -76,7 +74,6 @@ class Lookuptest(unittest.TestCase):
             fake = main_menu()
 
             self.assertEqual(fake, "a")
-
 
 
     def test_main_input_lower(self):
@@ -93,7 +90,6 @@ class Lookuptest(unittest.TestCase):
             self.assertEqual(fake, "a")
 
 
-
     def test_lookup_menu_a(self):
         """
         HERE I TEST THE INPUT OF FUNCTION LOOKUP_MENU
@@ -106,6 +102,7 @@ class Lookuptest(unittest.TestCase):
             fake = lookup_menu()
 
             self.assertEqual(fake, "a")
+
 
     def test_lookup_menu_lower(self):
         """
@@ -134,6 +131,7 @@ class Lookuptest(unittest.TestCase):
 
             self.assertEqual(fake, "a")
 
+
     def test_lookup_b(self):
         """
         HERE I TEST THE INPUT OF FUNCTION LOOKUP, IF ELIF CONDITIONS.
@@ -147,6 +145,7 @@ class Lookuptest(unittest.TestCase):
 
             self.assertEqual(fake, "b")
 
+
     def test_lookup_c(self):
         """
         HERE I TEST THE INPUT OF FUNCTION LOOKUP, IF ELIF CONDITIONS.
@@ -159,6 +158,7 @@ class Lookuptest(unittest.TestCase):
             fake = lookup()
 
             self.assertEqual(fake, "c")
+
 
     def test_lookup_d(self):
         """
@@ -184,7 +184,6 @@ class Lookuptest(unittest.TestCase):
     #         self.assertEqual(fake, "c")
 
 
-
     def test_make_edit_question(self):
         """
         HERE I TEST THE INPUT OF FUNCTION MAKE_EDIT
@@ -198,6 +197,7 @@ class Lookuptest(unittest.TestCase):
 
             self.assertEqual(fake,"a")
 
+
     def test_make_edit_question_lower(self):
         """
         HERE I TEST THE INPUT OF FUNCTION MAKE_EDIT LOWERCASE
@@ -210,6 +210,7 @@ class Lookuptest(unittest.TestCase):
             fake = make_edit_question()
 
             self.assertEqual(fake,"a")
+            
 
 if __name__ == '__main__':
     unittest.main()

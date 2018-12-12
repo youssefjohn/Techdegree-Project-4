@@ -5,7 +5,11 @@
 '''
 
 
-import sys, datetime, sqlite3
+import sys, datetime, sqlite3, os
+
+
+def clear():
+    os.system('cls' if os.name == 'nt' else 'clear')
 
 
 def lookup_menu():
@@ -22,10 +26,10 @@ def lookup_menu():
                           "B) Find by Date\n"
                           "C) Find by Time spent\n"
                           "D) Find by Search term\n"
-                          "E) Exit to main menu\n"
-                          "> "
+                          "E) Exit to main menu"
                           ).lower()
 
+    clear()
     return lookup_choice
 
 def lookup():
@@ -42,19 +46,19 @@ def lookup():
     lookup_choice = lookup_menu()
 
     if lookup_choice == "a":
-        entry_by_name = input("Enter a name: ")
+        entry_by_name = input("Enter a name")
         lookup_by_name(entry_by_name)
 
     elif lookup_choice == "b":
-        entry_by_date = input("Enter a date (dd/mm/yyyy): ")
+        entry_by_date = input("Enter a date")
         lookup_by_date(entry_by_date)
 
     elif lookup_choice == "c":
-        entry_by_time = input("Enter a time: ")
+        entry_by_time = input("Enter a time")
         lookup_by_time(entry_by_time)
 
     elif lookup_choice == "d":
-        entry_by_search_term = input("Enter a Search Term: ")
+        entry_by_search_term = input("Enter a Search Term")
         entry_by_search_term = "%" + entry_by_search_term + "%"
         print(entry_by_search_term)
         lookup_by_search_term(entry_by_search_term, entry_by_search_term)
@@ -95,7 +99,7 @@ def make_edits(row_to_edit):
                               "A) Employee name\n"
                               "B) Date\n"
                               "C) Time\n"
-                              "D) Notes "
+                              "D) Notes"
                               ).lower()
 
         if which_coloumn == "a":
@@ -155,7 +159,7 @@ def shorten_code(list_of_results):
         print("Time: ", thing[3])
         print("Notes: ", thing[4])
         print("Date: ", thing[5])
-        a = input("Press Enter to see next result. ")
+        a = input("Press Enter to see next result.")
         print("")
 
 
@@ -318,6 +322,7 @@ def main_menu():
                   "C) Quit the program\n"
                   "> ").lower()
 
+    clear()
     return begin
 
 def main():
